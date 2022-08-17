@@ -139,7 +139,7 @@ const Index: NextPage = () => {
           </div>
         </Section>
         <Section>
-          <SectionMainHeading>Stacks</SectionMainHeading>
+          <SectionMainHeading>Tech Stack</SectionMainHeading>
           <a
             data-theme="light"
             data-layers="1,2,3,4"
@@ -150,9 +150,9 @@ const Index: NextPage = () => {
             src="https://cdn1.stackshare.io/javascripts/client-code.js"
             charSet="utf-8"
           />
-          <p className="mb-4">上記の技術スタックは一部となります。</p>
+          <p className="my-4">上記の技術スタックを使うことが多いです。</p>
           <p>
-            これ以外の技術を用いた開発にも対応できる場合がありますので、お気軽にご相談ください。
+            これら以外の技術を用いた開発にも対応できる場合がありますので、お気軽にご相談ください。
           </p>
         </Section>
         <Section>
