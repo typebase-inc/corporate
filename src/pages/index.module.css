@@ -1,0 +1,7 @@
+.hero {
+  background-image: url('/images/hero.jpeg');
+  background-size: cover;
+  height: 90vh;
+
+  @apply object-cover flex flex-col items-center justify-center gap-10;
+}

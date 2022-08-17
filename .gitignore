@@ -37,3 +37,6 @@ next-env.d.ts
 
 # VSCode
 .vscode/settings.json
+
+# typed-css-modules
+*.module.css.d.ts
