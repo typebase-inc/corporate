@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
+import type { ReactNode } from 'react'
 
 import s from './index.module.css'
 
@@ -18,6 +20,12 @@ const Index: NextPage = () => {
       </a>
     )
   }
+  const Section = ({ children }: { children: ReactNode }) => {
+    return <section className="py-10">{children}</section>
+  }
+  const SectionMainHeading = ({ children }: { children: ReactNode }) => {
+    return <h2 className="text-text text-4xl font-bold mb-5">{children}</h2>
+  }
   return (
     <>
       <Head>
@@ -26,6 +34,9 @@ const Index: NextPage = () => {
           name="description"
           content="株式会社TypebaseはWebサービスの受託開発を行う会社です。"
         />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="msapplication-TileColor" content="#da532c" />
+        <meta name="theme-color" content="#ffffff" />
         <link rel="icon" href="/favicon.ico" />
         <link
           rel="apple-touch-icon"
@@ -46,8 +57,6 @@ const Index: NextPage = () => {
         />
         <link rel="manifest" href="/site.webmanifest" />
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-        <meta name="msapplication-TileColor" content="#da532c" />
-        <meta name="theme-color" content="#ffffff" />
       </Head>
       <header className="px-5 py-4">
         <div className="container mx-auto">
@@ -67,27 +76,30 @@ const Index: NextPage = () => {
         </div>
       </header>
       <section className={s.hero}>
-        <h1 className="text-white font-bold text-3xl px-8 leading-normal md:text-4xl">
+        <h1
+          className="text-white font-bold text-3xl px-8 leading-normal md:text-5xl"
+          style={{ lineHeight: 1.5 }}
+        >
           継続的に御社の開発を
           <br />
           ご支援します
         </h1>
         <ContactButton />
       </section>
-      <main className="max-w-4xl mx-auto px-6 py-5">
-        <section className="py-5">
-          <h2 className="text-text text-4xl font-bold mb-4">About</h2>
-          <p className="text-text text-lg">
-            私たちはWeb系のシステム開発を行うエンジニア集団です。
+      <main className="max-w-4xl mx-auto px-6 py-8">
+        <Section>
+          <SectionMainHeading>About</SectionMainHeading>
+          <p className="text-text text-lg pb-4">
+            私たちTypebaseはWeb系のシステム開発を支援するエンジニア集団です。
           </p>
           <p className="text-text text-lg">
-            まずはお気軽にお問い合わせください。
+            実務経験が豊富なエンジニアが、まるで自社に開発メンバーがいるかのように開発を推進していきます。
           </p>
-        </section>
-        <section className="py-5">
-          <h2 className="text-text text-4xl font-bold mb-4">Service</h2>
-          <div className="flex flex-col gap-5 md:flex-row">
-            <div className="bg-gray-100 p-5 flex-grow">
+        </Section>
+        <Section>
+          <SectionMainHeading>Services</SectionMainHeading>
+          <div className="grid gap-5 md:grid-cols-2">
+            <div className="bg-gray-100 p-5">
               <h3 className="text-text text-2xl font-bold mb-5">
                 🤝 Web受託開発
               </h3>
@@ -96,7 +108,7 @@ const Index: NextPage = () => {
                 「作って終わり」ではなく、継続的にシステムの改善に取り組んでいきます。
               </p>
             </div>
-            <div className="bg-gray-100 p-5 flex-grow">
+            <div className="bg-gray-100 p-5">
               <h3 className="text-text text-2xl font-bold mb-5">
                 🔄 コードレビュー / リファクタリング
               </h3>
@@ -105,12 +117,48 @@ const Index: NextPage = () => {
                 「実装者はいるけど、正しく実装できているか不安」という場合はぜひお声がけください。
               </p>
             </div>
+            <div className="bg-gray-100 p-5">
+              <h3 className="text-text text-2xl font-bold mb-5">
+                💵 システム開発の見積り
+              </h3>
+              <p>
+                Webシステムの開発の相場がわからない場合や、既存の開発費が妥当か判断しにくい場合はぜひ一度お声がけください。
+              </p>
+            </div>
+            <div className="bg-gray-100 p-5">
+              <h3 className="text-text text-2xl font-bold mb-5">
+                🤔 その他ご相談
+              </h3>
+              <p>
+                Web開発に関して、不明点などありましたらお気軽にご相談ください。
+              </p>
+            </div>
           </div>
-        </section>
-        <section className="py-5">
-          <h2 className="text-text text-4xl font-bold mb-4">Company</h2>
+          <div className="flex items-center justify-center pt-10">
+            <ContactButton />
+          </div>
+        </Section>
+        <Section>
+          <SectionMainHeading>Stacks</SectionMainHeading>
+          <a
+            data-theme="light"
+            data-layers="1,2,3,4"
+            data-stack-embed="true"
+            href="https://embed.stackshare.io/stacks/embed/4f8b2670291b0b72ea6df2db1a5fa2"
+          ></a>
+          <Script
+            src="https://cdn1.stackshare.io/javascripts/client-code.js"
+            charSet="utf-8"
+          />
+          <p className="mb-4">上記の技術スタックは一部となります。</p>
+          <p>
+            これ以外の技術を用いた開発にも対応できる場合がありますので、お気軽にご相談ください。
+          </p>
+        </Section>
+        <Section>
+          <SectionMainHeading>Company</SectionMainHeading>
           <div className="p-4">
-            <table className="table-fixed w-full">
+            <table className="table-fixed w-full text-text">
               <tbody>
                 <tr className="border-t">
                   <td className="p-4">会社名</td>
@@ -143,18 +191,18 @@ const Index: NextPage = () => {
               </tbody>
             </table>
           </div>
-        </section>
-        <section className="py-5">
-          <h2 className="text-text text-4xl font-bold mb-4">Contact</h2>
+        </Section>
+        <Section>
+          <SectionMainHeading>Contact</SectionMainHeading>
           <p className="text-text text-lg">
             まずはお気軽にお問い合わせください。
           </p>
           <div className="flex items-center justify-center p-10">
             <ContactButton />
           </div>
-        </section>
+        </Section>
       </main>
-      <footer className="bg-primary pt-10 px-5 pb-5 text-white">
+      <footer className="bg-primary pt-10 px-5 pb-5 text-white ">
         <div className="flex flex-col flex-start max-w-4xl mx-auto gap-10 md:flex-row md:gap-14">
           <div className="md:flex-grow">
             <Link href="/">
