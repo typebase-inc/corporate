@@ -26,14 +26,21 @@ const Index: NextPage = () => {
   const SectionMainHeading = ({ children }: { children: ReactNode }) => {
     return <h2 className="text-text text-4xl font-bold mb-5">{children}</h2>
   }
+  const url = 'https://typebase.dev'
+  const title = '株式会社Typebase'
+  const description = '株式会社TypebaseはWebサービスの受託開発を行う会社です。'
+  const thumbnail = `${url}/images/OGP.png`
   return (
     <>
       <Head>
-        <title>株式会社Typebase</title>
-        <meta
-          name="description"
-          content="株式会社TypebaseはWebサービスの受託開発を行う会社です。"
-        />
+        <title>{title}</title>
+        <meta name="description" content={description} />
+        <meta property="og:url" content={url} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:site_name" content={title} />
+        <meta property="og:image" content={thumbnail} />
         <meta name="viewport" content="width=device-width" />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
