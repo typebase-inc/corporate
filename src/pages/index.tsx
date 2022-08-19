@@ -69,7 +69,7 @@ const Index: NextPage = () => {
       </Head>
       <header className="px-5 py-4">
         <div className="container mx-auto">
-          <h1>
+          <h1 className="flex">
             <Link href="/">
               <a className="inline-block">
                 <Image
