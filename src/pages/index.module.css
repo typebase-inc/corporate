@@ -1,6 +1,6 @@
 .hero {
   background-image: url('/images/hero.webp');
-  height: 90vh;
+  height: calc(90vh - 74px);
 
-  @apply object-cover flex flex-col items-center justify-center gap-10 bg-cover bg-primary;
+  @apply bg-cover bg-primary flex flex-col items-center justify-center gap-10;
 }

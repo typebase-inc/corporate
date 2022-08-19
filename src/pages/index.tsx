@@ -75,7 +75,7 @@ const Index: NextPage = () => {
                 <Image
                   src="/images/logo-landscape.webp"
                   width="180"
-                  height="42"
+                  height="43"
                   alt="株式会社Typebase"
                 />
               </a>
@@ -165,7 +165,7 @@ const Index: NextPage = () => {
         </Section>
         <Section>
           <SectionMainHeading>Company</SectionMainHeading>
-          <div className="p-4">
+          <div className="py-4 md:px-4">
             <table className="table-fixed w-full text-text">
               <tbody>
                 <tr className="border-t">
