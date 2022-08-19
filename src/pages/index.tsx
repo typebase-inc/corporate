@@ -89,7 +89,7 @@ const Index: NextPage = () => {
           className="text-white font-bold text-3xl px-8 leading-normal md:text-5xl"
           style={{ lineHeight: 1.5 }}
         >
-          継続的に御社の開発を
+          継続的に貴社の開発を
           <br />
           ご支援します
         </h1>
@@ -159,7 +159,7 @@ const Index: NextPage = () => {
             src="https://cdn1.stackshare.io/javascripts/client-code.js"
             charSet="utf-8"
           />
-          <p className="my-4">上記の技術スタックを使うことが多いです。</p>
+          <p className="my-4">上記の技術を使うことが多いです。</p>
           <p>
             これら以外の技術を用いた開発にも対応できる場合がありますので、お気軽にご相談ください。
           </p>
