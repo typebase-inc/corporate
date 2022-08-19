@@ -71,7 +71,7 @@ const Index: NextPage = () => {
         <div className="container mx-auto">
           <h1>
             <Link href="/">
-              <a>
+              <a className="inline-block">
                 <Image
                   src="/images/logo-landscape.webp"
                   width="180"
