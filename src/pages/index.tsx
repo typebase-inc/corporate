@@ -1,6 +1,6 @@
 import type { NextPage } from 'next'
+import Image from 'next/future/image'
 import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import type { ReactNode } from 'react'
@@ -71,10 +71,9 @@ const Index: NextPage = () => {
         <div className="container mx-auto">
           <h1>
             <Link href="/">
-              <a className="flex">
+              <a>
                 <Image
                   src="/images/logo-landscape.webp"
-                  objectFit="contain"
                   width="180"
                   height="42"
                   alt="株式会社Typebase"
@@ -213,14 +212,13 @@ const Index: NextPage = () => {
       </main>
       <footer className="bg-primary pt-10 px-5 pb-5 text-white ">
         <div className="flex flex-col flex-start max-w-4xl mx-auto gap-10 md:flex-row md:gap-14">
-          <div className="md:flex-grow">
+          <div className="flex md:flex-grow">
             <Link href="/">
-              <a>
+              <a className="grow-0">
                 <Image
                   src="/images/logo-main-white.webp"
                   width={100}
                   height={80}
-                  objectFit="contain"
                   alt="株式会社Typebase"
                 />
               </a>
