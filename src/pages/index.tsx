@@ -5,6 +5,8 @@ import Link from 'next/link'
 import Script from 'next/script'
 import type { ReactNode } from 'react'
 
+import { News } from '~/components/News'
+
 import s from './index.module.css'
 
 const Index: NextPage = () => {
@@ -21,14 +23,18 @@ const Index: NextPage = () => {
     )
   }
   const Section = ({ children }: { children: ReactNode }) => {
-    return <section className="py-10">{children}</section>
+    return <section className="py-14">{children}</section>
   }
   const SectionMainHeading = ({ children }: { children: ReactNode }) => {
-    return <h2 className="text-text text-4xl font-bold mb-5">{children}</h2>
+    return (
+      <h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary to-primaryDarker inline-block">
+        {children}
+      </h2>
+    )
   }
   const url = 'https://typebase.dev'
   const title = '株式会社Typebase'
-  const description = '株式会社TypebaseはWebサービスの受託開発を行う会社です。'
+  const description = '株式会社TypebaseはWebサービスの開発支援を行う会社です。'
   const thumbnail = `${url}/images/OGP.png`
   return (
     <>
@@ -107,16 +113,14 @@ const Index: NextPage = () => {
         <Section>
           <SectionMainHeading>Services</SectionMainHeading>
           <div className="grid gap-5 md:grid-cols-2">
-            <div className="bg-gray-100 p-5">
-              <h3 className="text-text text-2xl font-bold mb-5">
-                🤝 Web受託開発
-              </h3>
+            <div className="bg-gray-100 p-6">
+              <h3 className="text-text text-2xl font-bold mb-5">🤝 Web開発</h3>
               <p>Webサービス全般の開発・運用を行います。</p>
               <p>
                 「作って終わり」ではなく、継続的にシステムの改善に取り組んでいきます。
               </p>
             </div>
-            <div className="bg-gray-100 p-5">
+            <div className="bg-gray-100 p-6">
               <h3 className="text-text text-2xl font-bold mb-5">
                 🔄 コードレビュー / リファクタリング
               </h3>
@@ -125,7 +129,7 @@ const Index: NextPage = () => {
                 「実装者はいるけど、正しく実装できているか不安」という場合はぜひお声がけください。
               </p>
             </div>
-            <div className="bg-gray-100 p-5">
+            <div className="bg-gray-100 p-6">
               <h3 className="text-text text-2xl font-bold mb-5">
                 💵 システム開発の見積り
               </h3>
@@ -133,7 +137,7 @@ const Index: NextPage = () => {
                 Webシステムの開発の相場がわからない場合や、既存の開発費が妥当か判断しにくい場合はぜひ一度お声がけください。
               </p>
             </div>
-            <div className="bg-gray-100 p-5">
+            <div className="bg-gray-100 p-6">
               <h3 className="text-text text-2xl font-bold mb-5">
                 🤔 その他ご相談
               </h3>
@@ -154,14 +158,15 @@ const Index: NextPage = () => {
             data-stack-embed="true"
             href="https://embed.stackshare.io/stacks/embed/4f8b2670291b0b72ea6df2db1a5fa2"
           ></a>
-          <Script
-            src="https://cdn1.stackshare.io/javascripts/client-code.js"
-            charSet="utf-8"
-          />
+          <Script src="https://cdn1.stackshare.io/javascripts/client-code.js" />
           <p className="my-4">上記の技術を使うことが多いです。</p>
           <p>
             これら以外の技術を用いた開発にも対応できる場合がありますので、お気軽にご相談ください。
           </p>
+        </Section>
+        <Section>
+          <SectionMainHeading>News</SectionMainHeading>
+          <News />
         </Section>
         <Section>
           <SectionMainHeading>Company</SectionMainHeading>
@@ -186,7 +191,7 @@ const Index: NextPage = () => {
                 </tr>
                 <tr className="border-t border-b">
                   <td className="p-4">事業内容</td>
-                  <td className="p-4">Webサービスの受託開発および運用</td>
+                  <td className="p-4">Webサービスの開発および運用</td>
                 </tr>
                 <tr className="border-t border-b">
                   <td className="p-4">住所</td>
