@@ -27,7 +27,7 @@ const Index: NextPage = () => {
   }
   const SectionMainHeading = ({ children }: { children: ReactNode }) => {
     return (
-      <h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-primary to-primaryDarker inline-block">
+      <h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-primaryLighter to-primaryDarker inline-block">
         {children}
       </h2>
     )
