@@ -76,15 +76,13 @@ const Index: NextPage = () => {
       <header className="px-5 py-4">
         <div className="container mx-auto">
           <h1 className="flex">
-            <Link href="/">
-              <a className="inline-block">
-                <Image
-                  src="/images/logo-landscape.webp"
-                  width="180"
-                  height="43"
-                  alt="株式会社Typebase"
-                />
-              </a>
+            <Link href="/" className="inline-block">
+              <Image
+                src="/images/logo-landscape.webp"
+                width="180"
+                height="43"
+                alt="株式会社Typebase"
+              />
             </Link>
           </h1>
         </div>
@@ -218,15 +216,13 @@ const Index: NextPage = () => {
       <footer className="bg-primary pt-10 px-5 pb-5 text-white ">
         <div className="flex flex-col flex-start max-w-4xl mx-auto gap-10 md:flex-row md:gap-14">
           <div className="flex md:flex-grow">
-            <Link href="/">
-              <a className="grow-0">
-                <Image
-                  src="/images/logo-main-white.webp"
-                  width={100}
-                  height={80}
-                  alt="株式会社Typebase"
-                />
-              </a>
+            <Link href="/" className="grow-0">
+              <Image
+                src="/images/logo-main-white.webp"
+                width={100}
+                height={80}
+                alt="株式会社Typebase"
+              />
             </Link>
           </div>
           <div className="flex flex-col gap-3">
