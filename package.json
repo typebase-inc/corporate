@@ -13,30 +13,34 @@
     "lint:prettier": "prettier --check .",
     "format": "run-s format:prettier format:eslint",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "yarn lint:prettier --write"
+    "format:prettier": "yarn lint:prettier --write",
+    "typecheck": "tsc",
+    "ncu:dev": "ncu -u --dep dev",
+    "ncu:prod": "ncu -u --dep prod"
   },
   "dependencies": {
-    "next": "12.2.5",
+    "next": "13.0.2",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@types/node": "18.7.5",
-    "@types/react": "18.0.17",
-    "@types/react-dom": "18.0.6",
-    "@typescript-eslint/eslint-plugin": "5.33.1",
-    "@typescript-eslint/parser": "5.33.1",
-    "autoprefixer": "10.4.8",
-    "concurrently": "7.3.0",
-    "eslint": "8.22.0",
-    "eslint-config-next": "12.2.5",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.8",
+    "@typescript-eslint/eslint-plugin": "5.42.1",
+    "@typescript-eslint/parser": "5.42.1",
+    "autoprefixer": "10.4.13",
+    "concurrently": "7.5.0",
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.2",
     "eslint-config-prettier": "8.5.0",
-    "eslint-plugin-simple-import-sort": "7.0.0",
+    "eslint-plugin-simple-import-sort": "8.0.0",
+    "npm-check-updates": "16.3.18",
     "npm-run-all": "4.1.5",
-    "postcss": "8.4.16",
+    "postcss": "8.4.18",
     "prettier": "2.7.1",
-    "tailwindcss": "3.1.8",
+    "tailwindcss": "3.2.3",
     "typed-css-modules": "0.7.2",
-    "typescript": "4.7.4"
+    "typescript": "4.8.4"
   }
 }
