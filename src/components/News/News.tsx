@@ -11,7 +11,7 @@ export const News = () => {
               className="inline text-lg text-slate-600 font-bold hover:underline hover:text-primaryDarker transition duration-200 ease-out hover:easy-in"
               href={item.url}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
             >
               {item.title}
             </a>
