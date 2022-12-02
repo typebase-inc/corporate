@@ -1,5 +1,10 @@
 export const news = [
   {
+    title: '「JSConf JP 2022」にTypebaseがスポンサーとして協賛しました',
+    url: 'https://jsconf.jp/2022/sponsors/',
+    publishedAt: '2022/11/26',
+  },
+  {
     title:
       'Google DocsからWebサイトを瞬時に作成！「Instadoc(仮)」の事前登録受付開始',
     url: 'https://prtimes.jp/main/html/rd/p/000000005.000106834.html',
