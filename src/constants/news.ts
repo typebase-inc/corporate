@@ -1,5 +1,11 @@
 export const news = [
   {
+    title:
+      'Next.js、Prisma、GraphQL Code Generatorで作るフルスタックWebアプリケーション - Udemyにて動画講座を公開',
+    url: 'https://prtimes.jp/main/html/rd/p/000000006.000106834.html',
+    publishedAt: '2023/2/8',
+  },
+  {
     title: '「JSConf JP 2022」にTypebaseがスポンサーとして協賛しました',
     url: 'https://jsconf.jp/2022/sponsors/',
     publishedAt: '2022/11/26',
