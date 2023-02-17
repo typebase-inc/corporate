@@ -1,7 +1,7 @@
 export const news = [
   {
     title:
-      'インプレス NextPublishigng より書籍「Next.js、Prisma、GraphQL Code Generatorで作るフルスタックWebアプリケーション」が発行されました',
+      'インプレス NextPublishing より書籍「Next.js、Prisma、GraphQL Code Generatorで作るフルスタックWebアプリケーション」が発行されました',
     url: 'https://nextpublishing.jp/book/16330.html',
     publishedAt: '2023/2/17',
   },
