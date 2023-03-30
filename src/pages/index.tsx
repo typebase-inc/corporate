@@ -213,7 +213,7 @@ const Index: NextPage = () => {
           </div>
         </Section>
       </main>
-      <footer className="bg-primary pt-10 px-5 pb-5 text-white ">
+      <footer className={s.footer}>
         <div className="flex flex-col flex-start max-w-4xl mx-auto gap-10 md:flex-row md:gap-14">
           <div className="flex md:flex-grow">
             <Link href="/" className="grow-0">

@@ -1,6 +1,20 @@
 .hero {
-  background-image: url('/images/hero.webp');
   height: calc(90vh - 74px);
 
-  @apply bg-cover bg-primary flex flex-col items-center justify-center gap-10;
+  @apply bg-[url('/images/hero.webp')] bg-cover bg-primary flex flex-col items-center justify-center gap-10;
+}
+
+.footer {
+  @apply pt-10 px-5 pb-5 text-white;
+  @apply animate-[bgPosition_4s_ease_infinite] bg-[length:400%] bg-gradient-to-r from-primary to-primaryDarker;
+}
+
+@keyframes bgPosition {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
 }
