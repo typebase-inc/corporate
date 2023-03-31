@@ -10,28 +10,25 @@ import { News } from '~/components/News'
 import s from './index.module.css'
 
 const Index: NextPage = () => {
-  const ContactButton = () => {
-    return (
-      <a
-        className="inline-block border border-primaryLighter bg-white from-primaryLighter to-primaryDarker px-10 py-6 font-bold text-text transition duration-300 ease-out hover:bg-gradient-to-br hover:text-white"
-        href="https://forms.gle/gjjhAcAKU328qE4eA"
-        target="_blank"
-        rel="noreferrer noopener"
-      >
-        お問い合わせはこちら
-      </a>
-    )
-  }
-  const Section = ({ children }: { children: ReactNode }) => {
-    return <section className="py-14">{children}</section>
-  }
-  const SectionMainHeading = ({ children }: { children: ReactNode }) => {
-    return (
-      <h2 className="mb-8 inline-block bg-gradient-to-br from-primaryLighter to-primaryDarker bg-clip-text text-4xl font-bold text-transparent">
-        {children}
-      </h2>
-    )
-  }
+  const ContactButton = () => (
+    <a
+      className="inline-block border border-primaryLighter bg-white from-primaryLighter to-primaryDarker px-10 py-6 font-bold text-text transition duration-300 ease-out hover:bg-gradient-to-br hover:text-white"
+      href="https://forms.gle/gjjhAcAKU328qE4eA"
+      target="_blank"
+      rel="noreferrer noopener"
+    >
+      お問い合わせはこちら
+    </a>
+  )
+  const Section = ({ children }: { children: ReactNode }) => (
+    <section className="py-14">{children}</section>
+  )
+  const SectionMainHeading = ({ children }: { children: ReactNode }) => (
+    <h2 className="mb-8 inline-block bg-gradient-to-br from-primaryLighter to-primaryDarker bg-clip-text text-4xl font-bold text-transparent">
+      {children}
+    </h2>
+  )
+
   const url = 'https://typebase.dev'
   const title = '株式会社Typebase'
   const description = '株式会社TypebaseはWebサービスの開発支援を行う会社です。'
@@ -90,6 +87,7 @@ const Index: NextPage = () => {
       <section className={s.hero}>
         <h1
           className="px-8 text-3xl font-bold leading-normal text-white md:text-5xl"
+          // HACK: md:text-5xl の line-height を上書き
           style={{ lineHeight: 1.5 }}
         >
           継続的に貴社の開発を
@@ -111,38 +109,55 @@ const Index: NextPage = () => {
         <Section>
           <SectionMainHeading>Services</SectionMainHeading>
           <div className="grid gap-5 md:grid-cols-2">
-            <div className="bg-gray-100 p-6">
-              <h3 className="mb-5 text-2xl font-bold text-text">🤝 Web開発</h3>
-              <p>Webサービス全般の開発・運用を行います。</p>
-              <p>
-                「作って終わり」ではなく、継続的にシステムの改善に取り組んでいきます。
-              </p>
-            </div>
-            <div className="bg-gray-100 p-6">
-              <h3 className="mb-5 text-2xl font-bold text-text">
-                🔄 コードレビュー / リファクタリング
-              </h3>
-              <p>既存システムのコードレビューやリファクタリングを行います。</p>
-              <p>
-                「実装者はいるけど、正しく実装できているか不安」という場合はぜひお声がけください。
-              </p>
-            </div>
-            <div className="bg-gray-100 p-6">
-              <h3 className="mb-5 text-2xl font-bold text-text">
-                💵 システム開発の見積り
-              </h3>
-              <p>
-                Webシステムの開発の相場がわからない場合や、既存の開発費が妥当か判断しにくい場合はぜひ一度お声がけください。
-              </p>
-            </div>
-            <div className="bg-gray-100 p-6">
-              <h3 className="mb-5 text-2xl font-bold text-text">
-                🤔 その他ご相談
-              </h3>
-              <p>
-                Web開発に関して、不明点などありましたらお気軽にご相談ください。
-              </p>
-            </div>
+            {[
+              {
+                label: '🤝 Web開発',
+                description: (
+                  <>
+                    <p>Webサービス全般の開発・運用を行います。</p>
+                    <p>
+                      「作って終わり」ではなく、継続的にシステムの改善に取り組んでいきます。
+                    </p>
+                  </>
+                ),
+              },
+              {
+                label: '🔄 コードレビュー / リファクタリング',
+                description: (
+                  <>
+                    <p>
+                      既存システムのコードレビューやリファクタリングを行います。
+                    </p>
+                    <p>
+                      「実装者はいるけど、正しく実装できているか不安」という場合はぜひお声がけください。
+                    </p>
+                  </>
+                ),
+              },
+              {
+                label: '💵 システム開発の見積り',
+                description: (
+                  <p>
+                    Webシステムの開発の相場がわからない場合や、既存の開発費が妥当か判断しにくい場合はぜひ一度お声がけください。
+                  </p>
+                ),
+              },
+              {
+                label: '🤔 その他ご相談',
+                description: (
+                  <p>
+                    Web開発に関して、不明点などありましたらお気軽にご相談ください。
+                  </p>
+                ),
+              },
+            ].map((item) => (
+              <div key={item.label} className="bg-gray-100 p-6">
+                <h3 className="mb-5 text-2xl font-bold text-text">
+                  {item.label}
+                </h3>
+                {item.description}
+              </div>
+            ))}
           </div>
           <div className="flex items-center justify-center pt-10">
             <ContactButton />
@@ -171,34 +186,28 @@ const Index: NextPage = () => {
           <div className="py-4 md:px-4">
             <table className="w-full table-fixed text-text">
               <tbody>
-                <tr className="border-t">
-                  <td className="p-4">会社名</td>
-                  <td className="p-4">株式会社Typebase</td>
-                </tr>
-                <tr className="border-y">
-                  <td className="p-4">設立</td>
-                  <td className="p-4">2022年8月</td>
-                </tr>
-                <tr className="border-y">
-                  <td className="p-4">資本金</td>
-                  <td className="p-4">150万円</td>
-                </tr>
-                <tr className="border-y">
-                  <td className="p-4">代表取締役</td>
-                  <td className="p-4">寺嶋祐稀</td>
-                </tr>
-                <tr className="border-y">
-                  <td className="p-4">事業内容</td>
-                  <td className="p-4">Webサービスの開発および運用</td>
-                </tr>
-                <tr className="border-y">
-                  <td className="p-4">住所</td>
-                  <td className="p-4">
-                    〒921-8823
-                    <br />
-                    石川県野々市市粟田1丁目158番地
-                  </td>
-                </tr>
+                {[
+                  { title: '会社名', content: '株式会社Typebase' },
+                  { title: '設立', content: '2022年8月' },
+                  { title: '資本金', content: '150万円' },
+                  { title: '代表取締役', content: '寺嶋祐稀' },
+                  { title: '事業内容', content: 'Webサービスの開発および運用' },
+                  {
+                    title: '住所',
+                    content: (
+                      <>
+                        〒921-8823
+                        <br />
+                        石川県野々市市粟田1丁目158番地
+                      </>
+                    ),
+                  },
+                ].map((item) => (
+                  <tr key={item.title} className="border-y">
+                    <td className="p-4">{item.title}</td>
+                    <td className="p-4">{item.content}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -227,27 +236,20 @@ const Index: NextPage = () => {
           </div>
           <div className="flex flex-col gap-3">
             <span className="mb-2 text-2xl font-bold">Social</span>
-            <a
-              href="https://zenn.dev/typebase"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Zenn
-            </a>
-            <a
-              href="https://twitter.com/typebase_inc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://github.com/typebase-inc"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              GitHub
-            </a>
+            {[
+              { href: 'https://zenn.dev/typebase', label: 'Zenn' },
+              { href: 'https://twitter.com/typebase_inc', label: 'Twitter' },
+              { href: 'https://github.com/typebase-inc', label: 'GitHub' },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {item.label}
+              </a>
+            ))}
           </div>
           <div className="flex flex-col gap-3">
             <span className="mb-2 text-2xl font-bold">Contact</span>
