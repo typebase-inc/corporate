@@ -13,7 +13,7 @@ const Index: NextPage = () => {
   const ContactButton = () => {
     return (
       <a
-        className="px-10 py-6 bg-white inline-block from-primaryLighter to-primaryDarker border border-primaryLighter text-text font-bold hover:bg-gradient-to-br hover:text-white transition duration-300 ease-out hover:easy-in"
+        className="inline-block border border-primaryLighter bg-white from-primaryLighter to-primaryDarker px-10 py-6 font-bold text-text transition duration-300 ease-out hover:bg-gradient-to-br hover:text-white"
         href="https://forms.gle/gjjhAcAKU328qE4eA"
         target="_blank"
         rel="noreferrer noopener"
@@ -27,7 +27,7 @@ const Index: NextPage = () => {
   }
   const SectionMainHeading = ({ children }: { children: ReactNode }) => {
     return (
-      <h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-br from-primaryLighter to-primaryDarker inline-block">
+      <h2 className="mb-8 inline-block bg-gradient-to-br from-primaryLighter to-primaryDarker bg-clip-text text-4xl font-bold text-transparent">
         {children}
       </h2>
     )
@@ -89,7 +89,7 @@ const Index: NextPage = () => {
       </header>
       <section className={s.hero}>
         <h1
-          className="text-white font-bold text-3xl px-8 leading-normal md:text-5xl"
+          className="px-8 text-3xl font-bold leading-normal text-white md:text-5xl"
           style={{ lineHeight: 1.5 }}
         >
           継続的に貴社の開発を
@@ -98,13 +98,13 @@ const Index: NextPage = () => {
         </h1>
         <ContactButton />
       </section>
-      <main className="max-w-4xl mx-auto px-6 py-8">
+      <main className="mx-auto max-w-4xl px-6 py-8">
         <Section>
           <SectionMainHeading>About</SectionMainHeading>
-          <p className="text-text text-lg pb-4">
+          <p className="pb-4 text-lg text-text">
             私たちTypebaseはWeb系のシステム開発を支援するエンジニア集団です。
           </p>
-          <p className="text-text text-lg">
+          <p className="text-lg text-text">
             実務経験が豊富なエンジニアが、まるで自社に開発メンバーがいるかのように開発を推進していきます。
           </p>
         </Section>
@@ -112,14 +112,14 @@ const Index: NextPage = () => {
           <SectionMainHeading>Services</SectionMainHeading>
           <div className="grid gap-5 md:grid-cols-2">
             <div className="bg-gray-100 p-6">
-              <h3 className="text-text text-2xl font-bold mb-5">🤝 Web開発</h3>
+              <h3 className="mb-5 text-2xl font-bold text-text">🤝 Web開発</h3>
               <p>Webサービス全般の開発・運用を行います。</p>
               <p>
                 「作って終わり」ではなく、継続的にシステムの改善に取り組んでいきます。
               </p>
             </div>
             <div className="bg-gray-100 p-6">
-              <h3 className="text-text text-2xl font-bold mb-5">
+              <h3 className="mb-5 text-2xl font-bold text-text">
                 🔄 コードレビュー / リファクタリング
               </h3>
               <p>既存システムのコードレビューやリファクタリングを行います。</p>
@@ -128,7 +128,7 @@ const Index: NextPage = () => {
               </p>
             </div>
             <div className="bg-gray-100 p-6">
-              <h3 className="text-text text-2xl font-bold mb-5">
+              <h3 className="mb-5 text-2xl font-bold text-text">
                 💵 システム開発の見積り
               </h3>
               <p>
@@ -136,7 +136,7 @@ const Index: NextPage = () => {
               </p>
             </div>
             <div className="bg-gray-100 p-6">
-              <h3 className="text-text text-2xl font-bold mb-5">
+              <h3 className="mb-5 text-2xl font-bold text-text">
                 🤔 その他ご相談
               </h3>
               <p>
@@ -169,29 +169,29 @@ const Index: NextPage = () => {
         <Section>
           <SectionMainHeading>Company</SectionMainHeading>
           <div className="py-4 md:px-4">
-            <table className="table-fixed w-full text-text">
+            <table className="w-full table-fixed text-text">
               <tbody>
                 <tr className="border-t">
                   <td className="p-4">会社名</td>
                   <td className="p-4">株式会社Typebase</td>
                 </tr>
-                <tr className="border-t border-b">
+                <tr className="border-y">
                   <td className="p-4">設立</td>
                   <td className="p-4">2022年8月</td>
                 </tr>
-                <tr className="border-t border-b">
+                <tr className="border-y">
                   <td className="p-4">資本金</td>
                   <td className="p-4">150万円</td>
                 </tr>
-                <tr className="border-t border-b">
+                <tr className="border-y">
                   <td className="p-4">代表取締役</td>
                   <td className="p-4">寺嶋祐稀</td>
                 </tr>
-                <tr className="border-t border-b">
+                <tr className="border-y">
                   <td className="p-4">事業内容</td>
                   <td className="p-4">Webサービスの開発および運用</td>
                 </tr>
-                <tr className="border-t border-b">
+                <tr className="border-y">
                   <td className="p-4">住所</td>
                   <td className="p-4">
                     〒921-8823
@@ -205,7 +205,7 @@ const Index: NextPage = () => {
         </Section>
         <Section>
           <SectionMainHeading>Contact</SectionMainHeading>
-          <p className="text-text text-lg">
+          <p className="text-lg text-text">
             まずはお気軽にお問い合わせください。
           </p>
           <div className="flex items-center justify-center p-10">
@@ -214,8 +214,8 @@ const Index: NextPage = () => {
         </Section>
       </main>
       <footer className={s.footer}>
-        <div className="flex flex-col flex-start max-w-4xl mx-auto gap-10 md:flex-row md:gap-14">
-          <div className="flex md:flex-grow">
+        <div className="mx-auto flex max-w-4xl flex-col gap-10 md:flex-row md:gap-14">
+          <div className="flex md:grow">
             <Link href="/" className="grow-0">
               <Image
                 src="/images/logo-main-white.webp"
@@ -226,7 +226,7 @@ const Index: NextPage = () => {
             </Link>
           </div>
           <div className="flex flex-col gap-3">
-            <span className="text-2xl font-bold mb-2">Social</span>
+            <span className="mb-2 text-2xl font-bold">Social</span>
             <a
               href="https://zenn.dev/typebase"
               target="_blank"
@@ -250,7 +250,7 @@ const Index: NextPage = () => {
             </a>
           </div>
           <div className="flex flex-col gap-3">
-            <span className="text-2xl font-bold mb-2">Contact</span>
+            <span className="mb-2 text-2xl font-bold">Contact</span>
             <a
               href="https://forms.gle/gjjhAcAKU328qE4eA"
               target="_blank"
@@ -260,7 +260,7 @@ const Index: NextPage = () => {
             </a>
           </div>
         </div>
-        <div className="text-center mt-10">© Typebase Inc.</div>
+        <div className="mt-10 text-center">© Typebase Inc.</div>
       </footer>
     </>
   )

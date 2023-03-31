@@ -6,9 +6,9 @@ export const News = () => {
       {news.map((item) => {
         return (
           <div key={item.url} className="flex flex-col gap-1">
-            <time className="text-slate-600 text-sm">{item.publishedAt}</time>
+            <time className="text-sm text-slate-600">{item.publishedAt}</time>
             <a
-              className="inline text-lg text-slate-600 font-bold hover:underline hover:text-primaryDarker transition duration-200 ease-out hover:easy-in"
+              className="inline text-lg font-bold text-slate-600 transition duration-200 ease-out hover:text-primaryDarker hover:underline hover:ease-in"
               href={item.url}
               target="_blank"
               rel="noopener noreferrer nofollow"
