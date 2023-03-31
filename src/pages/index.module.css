@@ -1,5 +1,5 @@
 .hero {
-  height: calc(90vh - 74px);
+  height: calc(94vh - 74px);
 
   @apply bg-[url('/images/hero.webp')] bg-cover bg-primary flex flex-col items-center justify-center gap-10;
 }
