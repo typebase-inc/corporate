@@ -2,6 +2,6 @@
 module.exports = {
   siteUrl: 'https://typebase.dev',
   generateRobotsTxt: true,
-  sitemapSize: 7000,
+  generateIndexSitemap: false,
   outDir: './out',
 }
