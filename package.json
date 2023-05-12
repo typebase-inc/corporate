@@ -6,7 +6,7 @@
     "serve": "next dev",
     "hcm:watch": "hcm 'src/**/*.module.css' -w",
     "dev": "concurrently \"npm:serve\" \"npm:hcm:watch\" -c blue,green",
-    "build": "next build && next export",
+    "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "run-p -l -c --aggregate-output lint:*",
