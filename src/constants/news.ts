@@ -1,6 +1,12 @@
 export const news = [
   {
     title:
+      'Web開発の新定番！「tRPC入門―型安全なWebアプリケーションを効率よくつくる」5月20日より技術書典14にて販売開始',
+    url: 'https://prtimes.jp/main/html/rd/p/000000007.000106834.html',
+    publishedAt: '2023/5/20',
+  },
+  {
+    title:
       'インプレス NextPublishing より書籍「Next.js、Prisma、GraphQL Code Generatorで作るフルスタックWebアプリケーション」が発行されました',
     url: 'https://nextpublishing.jp/book/16330.html',
     publishedAt: '2023/2/17',
