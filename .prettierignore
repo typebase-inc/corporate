@@ -1,6 +1,0 @@
-.next
-*.module.css.d.ts
-node_modules
-out
-pnpm-lock.yaml
-public

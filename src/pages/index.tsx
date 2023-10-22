@@ -165,6 +165,7 @@ const Index: NextPage = () => {
         </Section>
         <Section>
           <SectionMainHeading>Tech Stack</SectionMainHeading>
+          {/* biome-ignore lint: */}
           <a
             data-theme="light"
             data-layers="1,2,3,4"
