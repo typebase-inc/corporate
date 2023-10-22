@@ -7,8 +7,8 @@ https://typebase.dev
 ## Development
 
 ```sh
-yarn
-yarn dev
+pnpm i
+pnpm dev
 ```
 
 Open http://localhost:3000 with your browser to see the result.
