@@ -12,7 +12,7 @@ import s from './index.module.css'
 const Index: NextPage = () => {
   const ContactButton = () => (
     <a
-      className="inline-block border border-primaryLighter bg-white from-primaryLighter to-primaryDarker px-10 py-6 font-bold text-text transition duration-300 ease-out hover:bg-gradient-to-br hover:text-white"
+      className="inline-block border border-primaryLighter bg-white from-primaryLighter to-primaryDarker px-10 py-6 font-bold text-text hover:bg-gradient-to-br hover:text-white"
       href="https://forms.gle/gjjhAcAKU328qE4eA"
       target="_blank"
       rel="noreferrer noopener"
