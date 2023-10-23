@@ -9,11 +9,6 @@
       "recommended": true
     }
   },
-  "vcs": {
-    "enabled": true,
-    "clientKind": "git",
-    "useIgnoreFile": true
-  },
   "formatter": {
     "indentStyle": "space"
   },
@@ -22,5 +17,10 @@
       "semicolons": "asNeeded",
       "quoteStyle": "single"
     }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
   }
 }
