@@ -239,7 +239,7 @@ const Index: NextPage = () => {
             <span className="mb-2 text-2xl font-bold">Social</span>
             {[
               { href: 'https://zenn.dev/p/typebase_dev', label: 'Zenn' },
-              { href: 'https://twitter.com/typebase_inc', label: 'Twitter' },
+              { href: 'https://twitter.com/typebase_inc', label: 'X(Twitter)' },
               { href: 'https://github.com/typebase-inc', label: 'GitHub' },
             ].map((item) => (
               <a
