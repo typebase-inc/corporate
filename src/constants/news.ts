@@ -1,6 +1,12 @@
 export const news = [
   {
     title:
+      '株式会社Typebase、令和6年能登半島地震の被災地への義援金寄付のご報告',
+    url: 'https://prtimes.jp/main/html/rd/p/000000008.000106834.html',
+    publishedAt: '2024/1/5',
+  },
+  {
+    title:
       'Web開発の新定番！「tRPC入門―型安全なWebアプリケーションを効率よくつくる」5月20日より技術書典14にて販売開始',
     url: 'https://prtimes.jp/main/html/rd/p/000000007.000106834.html',
     publishedAt: '2023/5/20',
