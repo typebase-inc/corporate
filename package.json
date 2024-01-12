@@ -22,18 +22,18 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.4.1",
-    "@types/node": "20.8.9",
-    "@types/react": "18.2.33",
-    "@types/react-dom": "18.2.14",
+    "@biomejs/biome": "1.5.1",
+    "@types/node": "20.10.0",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
     "autoprefixer": "10.4.16",
     "concurrently": "8.2.2",
     "happy-css-modules": "2.1.2",
     "npm-check-updates": "16.14.12",
     "postcss": "8.4.33",
     "prettier": "3.1.1",
-    "tailwindcss": "3.4.0",
+    "tailwindcss": "3.4.1",
     "typescript": "5.3.3"
   },
-  "packageManager": "pnpm@8.14.0+sha256.9cebf61abd83f68177b29484da72da9751390eaad46dfc3072d266bfbb1ba7bf"
+  "packageManager": "pnpm@8.14.1+sha256.2df78e65d433d7693b9d3fbdaf431b2d96bb4f96a2ffecd51a50efe16e50a6a8"
 }
