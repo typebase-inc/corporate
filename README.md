@@ -4,6 +4,15 @@
 
 https://typebase.dev
 
+## Tech Stack
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Cloudflare Pages
+- Biome
+- pnpm
+
 ## Development
 
 ```sh
