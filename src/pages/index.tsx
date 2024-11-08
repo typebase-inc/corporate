@@ -173,7 +173,9 @@ const Index: NextPage = () => {
             href="https://embed.stackshare.io/stacks/embed/4f8b2670291b0b72ea6df2db1a5fa2"
           ></a>
           <Script src="https://cdn1.stackshare.io/javascripts/client-code.js" />
-          <p className="my-4">上記の技術を使うことが多いです。</p>
+          <p className="my-4">
+            React / Next.js / TypeScript 等の技術を使うことが多いです。
+          </p>
           <p>
             これら以外の技術を用いた開発にも対応できる場合がありますので、お気軽にご相談ください。
           </p>
