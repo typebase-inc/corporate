@@ -1,4 +1,4 @@
-import { news } from '~/constants/news'
+import { news } from './data'
 
 export const News = () => {
   return (

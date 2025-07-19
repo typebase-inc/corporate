@@ -1,75 +1,35 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
-import type { ReactNode } from 'react'
-
+import type { PropsWithChildren } from 'react'
 import { News } from '~/components/News'
 
-import s from './index.module.css'
+import s from './page.module.css'
 
-const Index: NextPage = () => {
-  const ContactButton = () => (
-    <a
-      className="inline-block border border-primary-lighter bg-white px-10 py-6 font-bold text-text hover:bg-linear-to-br hover:from-primary-lighter hover:to-primary-darker hover:text-white"
-      href="https://forms.gle/gjjhAcAKU328qE4eA"
-      target="_blank"
-      rel="noreferrer noopener"
-    >
-      お問い合わせはこちら
-    </a>
-  )
-  const Section = ({ children }: { children: ReactNode }) => (
-    <section className="py-14">{children}</section>
-  )
-  const SectionMainHeading = ({ children }: { children: ReactNode }) => (
-    <h2 className="mb-8 inline-block bg-linear-to-br from-primary-lighter to-primary-darker bg-clip-text text-4xl font-bold text-transparent">
-      {children}
-    </h2>
-  )
+const ContactButton = () => (
+  <a
+    className="inline-block border border-primary-lighter bg-white px-10 py-6 font-bold text-text hover:bg-linear-to-br hover:from-primary-lighter hover:to-primary-darker hover:text-white"
+    href="https://forms.gle/gjjhAcAKU328qE4eA"
+    target="_blank"
+    rel="noreferrer noopener"
+  >
+    お問い合わせはこちら
+  </a>
+)
 
-  const url = 'https://typebase.dev'
-  const title = '株式会社Typebase'
-  const description = '株式会社TypebaseはWebサービスの開発支援を行う会社です。'
-  const thumbnail = `${url}/images/OGP.png`
+const Section = ({ children }: PropsWithChildren) => (
+  <section className="py-14">{children}</section>
+)
+
+const SectionMainHeading = ({ children }: PropsWithChildren) => (
+  <h2 className="mb-8 inline-block bg-linear-to-br from-primary-lighter to-primary-darker bg-clip-text text-4xl font-bold text-transparent">
+    {children}
+  </h2>
+)
+
+export default function HomePage() {
   return (
     <>
-      <Head>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <meta property="og:url" content={url} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:site_name" content={title} />
-        <meta property="og:image" content={thumbnail} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@typebase_inc" />
-        <meta name="viewport" content="width=device-width" />
-        <meta name="msapplication-TileColor" content="#5bbad5" />
-        <meta name="theme-color" content="#ffffff" />
-        <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/apple-touch-icon.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png"
-        />
-        <link
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-      </Head>
       <header className="px-5 py-4">
         <div className="container mx-auto">
           <h1 className="flex">
@@ -270,5 +230,3 @@ const Index: NextPage = () => {
     </>
   )
 }
-
-export default Index
