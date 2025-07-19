@@ -201,7 +201,7 @@ export default function HomePage() {
             <span className="mb-2 text-2xl font-bold">Social</span>
             {[
               { href: 'https://zenn.dev/p/typebase_dev', label: 'Zenn' },
-              { href: 'https://twitter.com/typebase_inc', label: 'X(Twitter)' },
+              { href: 'https://x.com/typebase_inc', label: 'X(Twitter)' },
               { href: 'https://github.com/typebase-inc', label: 'GitHub' },
             ].map((item) => (
               <a
@@ -227,6 +227,68 @@ export default function HomePage() {
         </div>
         <div className="mt-10 text-center">© Typebase Inc.</div>
       </footer>
+
+      {/* JSON-LD structured data */}
+      <Script
+        id="organization-jsonld"
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires dangerouslySetInnerHTML
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Organization',
+            name: '株式会社Typebase',
+            alternateName: '株式会社Typebase',
+            url: 'https://typebase.dev',
+            logo: 'https://typebase.dev/images/logo-landscape.webp',
+            foundingDate: '2022-08-05',
+            legalName: '株式会社Typebase',
+            description:
+              '株式会社TypebaseはWebサービスの開発支援を行う会社です。',
+            address: {
+              '@type': 'PostalAddress',
+              addressCountry: 'JP',
+              addressRegion: '石川県',
+              addressLocality: '野々市市',
+              streetAddress: '粟田1丁目158番地',
+              postalCode: '921-8823',
+            },
+            contactPoint: {
+              '@type': 'ContactPoint',
+              contactType: 'customer service',
+              url: 'https://forms.gle/gjjhAcAKU328qE4eA',
+            },
+            sameAs: [
+              'https://zenn.dev/p/typebase_dev',
+              'https://x.com/typebase_inc',
+              'https://github.com/typebase-inc',
+            ],
+            founder: {
+              '@type': 'Person',
+              name: '寺嶋祐稀',
+            },
+          }),
+        }}
+      />
+      <Script
+        id="website-jsonld"
+        type="application/ld+json"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires dangerouslySetInnerHTML
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: '株式会社Typebase',
+            url: 'https://typebase.dev',
+            description:
+              '株式会社TypebaseはWebサービスの開発支援を行う会社です。',
+            publisher: {
+              '@type': 'Organization',
+              name: '株式会社Typebase',
+            },
+          }),
+        }}
+      />
     </>
   )
 }
