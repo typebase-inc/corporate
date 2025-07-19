@@ -12,7 +12,7 @@ import s from './index.module.css'
 const Index: NextPage = () => {
   const ContactButton = () => (
     <a
-      className="inline-block border border-primaryLighter bg-white from-primaryLighter to-primaryDarker px-10 py-6 font-bold text-text hover:bg-gradient-to-br hover:text-white"
+      className="inline-block border border-primary-lighter bg-white px-10 py-6 font-bold text-text hover:bg-linear-to-br hover:from-primary-lighter hover:to-primary-darker hover:text-white"
       href="https://forms.gle/gjjhAcAKU328qE4eA"
       target="_blank"
       rel="noreferrer noopener"
@@ -24,7 +24,7 @@ const Index: NextPage = () => {
     <section className="py-14">{children}</section>
   )
   const SectionMainHeading = ({ children }: { children: ReactNode }) => (
-    <h2 className="mb-8 inline-block bg-gradient-to-br from-primaryLighter to-primaryDarker bg-clip-text text-4xl font-bold text-transparent">
+    <h2 className="mb-8 inline-block bg-linear-to-br from-primary-lighter to-primary-darker bg-clip-text text-4xl font-bold text-transparent">
       {children}
     </h2>
   )
@@ -165,7 +165,7 @@ const Index: NextPage = () => {
         </Section>
         <Section>
           <SectionMainHeading>Tech Stack</SectionMainHeading>
-          {/* biome-ignore lint: */}
+          {/** biome-ignore lint/a11y/useAnchorContent: stackshare のために必要 */}
           <a
             data-theme="light"
             data-layers="1,2,3,4"
