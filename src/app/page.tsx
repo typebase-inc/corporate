@@ -8,7 +8,7 @@ import s from './page.module.css'
 
 const ContactButton = () => (
   <a
-    className="inline-block border border-primary-lighter bg-white px-10 py-6 font-bold text-text hover:bg-linear-to-br hover:from-primary-lighter hover:to-primary-darker hover:text-white"
+    className="inline-block border border-primary-lighter bg-white px-10 py-6 font-bold text-text transition-all duration-300 ease-out hover:bg-linear-to-br hover:from-primary-lighter hover:to-primary-darker hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-primary-lighter/30 hover:border-transparent"
     href="https://forms.gle/gjjhAcAKU328qE4eA"
     target="_blank"
     rel="noreferrer noopener"
@@ -47,13 +47,13 @@ export default function HomePage() {
       <section className={s.hero}>
         <WaveBackground />
         <h1
-          className="px-8 text-3xl font-bold leading-normal text-white md:text-5xl z-10 relative"
+          className="pl-4 text-3xl font-bold leading-normal text-white md:text-5xl z-10 relative"
           // HACK: md:text-5xl の line-height を上書き
           style={{ lineHeight: 1.5 }}
         >
-          継続的に貴社の開発を
+          型にはまらない、
           <br />
-          ご支援します
+          型のある開発を。
         </h1>
         <div className="relative z-10">
           <ContactButton />
