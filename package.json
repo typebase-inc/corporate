@@ -12,7 +12,7 @@
     "lint": "run-s -cl gen lint:*",
     "lint:biome": "biome check .",
     "lint:tsc": "tsc",
-    "format": "biome format . --write && biome check . --apply",
+    "format": "biome format . --write && biome check . --write",
     "ncu:dev": "ncu -u --dep dev",
     "ncu:prod": "ncu -u --dep prod"
   },

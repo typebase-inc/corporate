@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Script from 'next/script'
 import type { PropsWithChildren } from 'react'
-import { News } from '~/components/News'
+import { News, WaveBackground } from '~/components'
 
 import s from './page.module.css'
 
@@ -45,8 +45,9 @@ export default function HomePage() {
         </div>
       </header>
       <section className={s.hero}>
+        <WaveBackground />
         <h1
-          className="px-8 text-3xl font-bold leading-normal text-white md:text-5xl"
+          className="px-8 text-3xl font-bold leading-normal text-white md:text-5xl z-10 relative"
           // HACK: md:text-5xl の line-height を上書き
           style={{ lineHeight: 1.5 }}
         >
@@ -54,7 +55,9 @@ export default function HomePage() {
           <br />
           ご支援します
         </h1>
-        <ContactButton />
+        <div className="relative z-10">
+          <ContactButton />
+        </div>
       </section>
       <main className="mx-auto max-w-4xl px-6 py-8">
         <Section>

@@ -2,8 +2,11 @@
 
 .hero {
   height: calc(94vh - 74px);
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #3b6cb6 100%);
 
-  @apply bg-[url('/images/hero.webp')] bg-cover bg-primary flex flex-col items-center justify-center gap-10;
+  @apply flex flex-col items-center justify-center gap-10;
 }
 
 .footer {
