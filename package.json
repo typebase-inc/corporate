@@ -23,7 +23,7 @@
     "react-dom": "19.1.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.1.2",
+    "@biomejs/biome": "2.2.0",
     "@css-modules-kit/codegen": "0.4.1",
     "@tailwindcss/postcss": "4.1.11",
     "@types/node": "24.0.15",

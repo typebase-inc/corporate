@@ -233,7 +233,6 @@ export default function HomePage() {
 
       {/* JSON-LD structured data */}
       <Script
-        id="organization-jsonld"
         type="application/ld+json"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires dangerouslySetInnerHTML
         dangerouslySetInnerHTML={{
@@ -274,7 +273,6 @@ export default function HomePage() {
         }}
       />
       <Script
-        id="website-jsonld"
         type="application/ld+json"
         // biome-ignore lint/security/noDangerouslySetInnerHtml: JSON-LD requires dangerouslySetInnerHTML
         dangerouslySetInnerHTML={{
