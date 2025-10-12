@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: '株式会社Typebase',
   description: '株式会社TypebaseはWebサービスの開発支援を行う会社です。',
   openGraph: {
-    url: 'https://typebase.dev',
+    url: './',
     type: 'website',
     title: '株式会社Typebase',
     description: '株式会社TypebaseはWebサービスの開発支援を行う会社です。',

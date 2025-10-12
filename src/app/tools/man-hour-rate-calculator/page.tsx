@@ -14,13 +14,7 @@ export const metadata: Metadata = {
     type: 'website',
     siteName: '株式会社Typebase',
     images: 'https://typebase.dev/images/OGP.png',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title:
-      '稼働単価シミュレーター | フリーランス・業務委託の時給・月単価計算ツール',
-    description:
-      '時給から月単価、月単価から時給を簡単に計算。フリーランス・業務委託で働く方の収入シミュレーションに最適。',
+    url: './',
   },
 }
 
