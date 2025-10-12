@@ -496,8 +496,13 @@ export const ManHourRateCalculator = () => {
 
             {/* 万円表記（時給→月単価モードの計算結果のみ） */}
             {mode === 'hourlyToMonthly' && (
-              <div className="pl-1 text-lg font-medium text-gray-700">
-                {formatMonthlyRateInManYen(monthlyRate)}
+              <div className="pl-1 space-y-1">
+                <div className="text-lg font-medium text-gray-700">
+                  {formatMonthlyRateInManYen(monthlyRate)}（税抜き）
+                </div>
+                <div className="text-lg font-medium text-gray-700">
+                  {formatMonthlyRateInManYen(Math.round(monthlyRate * 1.1))}（税込み）
+                </div>
               </div>
             )}
           </div>

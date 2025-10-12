@@ -12,9 +12,11 @@ export const metadata: Metadata = {
     description:
       '時給から月単価、月単価から時給を簡単に計算。フリーランス・業務委託で働く方の収入シミュレーションに最適。',
     type: 'website',
+    siteName: '株式会社Typebase',
+    images: 'https://typebase.dev/images/OGP.png',
   },
   twitter: {
-    // card: 'summary_large_image',
+    card: 'summary_large_image',
     title:
       '稼働単価シミュレーター | フリーランス・業務委託の時給・月単価計算ツール',
     description:
@@ -173,9 +175,6 @@ export default function Page() {
               </p>
               <p className="rounded bg-gray-100 p-3 font-mono text-sm">
                 時給 = 月単価 ÷ (1日あたり稼働時間 × 月あたり稼働日数)
-              </p>
-              <p className="mt-4 text-sm text-gray-600">
-                ※ 税込み設定の場合は、計算結果に10%の消費税が加算されます。
               </p>
             </div>
           </div>
